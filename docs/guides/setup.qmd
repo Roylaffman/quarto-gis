@@ -1,0 +1,43 @@
+---
+title: "Setup"
+---
+
+## Install Quarto
+
+Install Quarto and confirm:
+
+```bash
+quarto --version
+```
+
+## Python environment
+
+From `research/`:
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## Render & preview
+
+Render a doc:
+
+```bash
+quarto render analysis/analysis-template.qmd
+```
+
+Preview with live reload:
+
+```bash
+quarto preview analysis/analysis-template.qmd
+```
+
+## Editor notes
+
+- VS Code: install **Quarto** extension.
+- Ensure your venv is activated in the integrated terminal if running Python chunks.

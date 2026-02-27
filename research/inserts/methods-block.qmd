@@ -1,0 +1,17 @@
+::: {.callout-note}
+## Methods (drop-in block)
+
+**Inputs**
+- Data source(s):
+- Time window:
+- CRS and spatial operations:
+
+**Processing**
+- Cleaning:
+- Spatial joins/buffers:
+- Aggregations:
+
+**Validation**
+- Spot checks:
+- Known limitations:
+:::

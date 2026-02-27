@@ -1,0 +1,470 @@
+---
+title: "Complete Workflow Guide"
+subtitle: "PostGIS → Python → Folium → Quarto — end to end"
+---
+
+This guide covers the full pipeline from database to finished document. It explains each template, the shared Python modules, and how the pieces fit together.
+
+---
+
+## The pipeline at a glance
+
+```
+PostgreSQL/PostGIS
+       │
+       ▼
+  db_connection.py      ← query_to_dataframe / query_to_geodataframe
+       │
+       ▼
+  Python / Pandas / GeoPandas
+       │
+       ▼
+  map_builder.py         ← create_base_map / add layers / finalize
+       │
+       ▼
+  Folium / Matplotlib / Plotly
+       │
+       ▼
+  Quarto .qmd            ← analysis or report template
+       │
+       ▼
+  Standalone HTML        ← embed-resources: true
+```
+
+---
+
+## 1. Database connection (`db_connection.py`) {#sec-db}
+
+The shared module at `research/db_connection.py` handles all PostGIS communication. It reads credentials from `research/.env` so nothing sensitive lives in code.
+
+### Setup
+
+1. Copy the example file:
+
+   ```bash
+   cd research
+   cp .env.example .env
+   ```
+
+2. Fill in your credentials in `.env`:
+
+   ```
+   PG_HOST=localhost
+   PG_PORT=5432
+   PG_DBNAME=my_gis_db
+   PG_USER=analyst
+   PG_PASSWORD=secret
+   ```
+
+3. **Never commit `.env`** — it's excluded by `.gitignore`.
+
+### Functions
+
+| Function | Returns | Use when |
+|---|---|---|
+| `get_connection()` | `psycopg2.connection` | You need raw cursor control |
+| `query_to_dataframe(sql)` | `pd.DataFrame` | Non-spatial tabular data |
+| `query_to_geodataframe(sql)` | `gpd.GeoDataFrame` | Spatial data with a geometry column |
+
+### Example: load spatial data
+
+```python
+from db_connection import query_to_geodataframe
+
+gdf = query_to_geodataframe("""
+    SELECT id, name, category, geom
+    FROM parcels.boundaries
+    WHERE county = 'King'
+""")
+gdf.head()
+```
+
+### Example: load tabular data
+
+```python
+from db_connection import query_to_dataframe
+
+df = query_to_dataframe("""
+    SELECT year, category, COUNT(*) as n
+    FROM permits.issued
+    GROUP BY year, category
+""")
+```
+
+### Writing effective PostGIS queries
+
+Common spatial SQL patterns you'll use:
+
+```sql
+-- Get geometry as-is (gpd.read_postgis handles WKB automatically)
+SELECT id, name, geom FROM my_table;
+
+-- Get centroid lat/lon for point markers
+SELECT id, name,
+       ST_Y(ST_Centroid(geom)) AS latitude,
+       ST_X(ST_Centroid(geom)) AS longitude
+FROM my_table;
+
+-- Buffer and intersect
+SELECT a.id, a.name, a.geom
+FROM sites AS a
+JOIN regions AS b ON ST_Intersects(a.geom, ST_Buffer(b.geom, 1000));
+
+-- Simplify geometry for faster rendering
+SELECT id, name, ST_Simplify(geom, 0.001) AS geom
+FROM detailed_boundaries;
+```
+
+---
+
+## 2. Map builder (`map_builder.py`) {#sec-maps}
+
+The shared module at `research/map_builder.py` provides reusable functions for building Folium maps. All functions return the map object so you can chain calls.
+
+### Tile presets
+
+| Key | Tiles | Best for |
+|---|---|---|
+| `"positron"` | CartoDB positron | Clean, light base — default |
+| `"dark"` | CartoDB dark_matter | Dark theme presentations |
+| `"osm"` | OpenStreetMap | Detailed street-level context |
+
+You can also pass any Folium-compatible tile string directly.
+
+### Functions
+
+#### `create_base_map(center, zoom, tiles, gdf)`
+
+Creates the Folium Map object. Pass a GeoDataFrame to `gdf` to auto-center on its bounds, or specify `center=[lat, lon]` manually.
+
+```python
+from map_builder import create_base_map
+
+# Auto-center on data
+m = create_base_map(gdf=my_geodataframe, zoom=12)
+
+# Manual center
+m = create_base_map(center=[47.6, -122.3], zoom=11, tiles="dark")
+```
+
+#### `add_geodataframe_layer(m, gdf, name, tooltip_fields, style, highlight)`
+
+Adds a GeoDataFrame as a GeoJSON layer with optional tooltips and styling.
+
+```python
+from map_builder import add_geodataframe_layer
+
+m = add_geodataframe_layer(
+    m, gdf,
+    name="Parcels",
+    tooltip_fields=["name", "area_sqft"],
+    style={"color": "#0ea5e9", "weight": 2, "fillOpacity": 0.3},
+    highlight={"weight": 4, "fillOpacity": 0.6},
+)
+```
+
+#### `add_point_markers(m, df, lat_col, lon_col, popup_col, tooltip_col, color)`
+
+Adds circle markers from a DataFrame with latitude/longitude columns.
+
+```python
+from map_builder import add_point_markers
+
+m = add_point_markers(
+    m, df,
+    lat_col="latitude",
+    lon_col="longitude",
+    tooltip_col="name",
+    popup_col="description",
+    color="#f97316",
+)
+```
+
+#### `finalize_map(m)`
+
+Adds LayerControl and returns the map. Always call this last.
+
+```python
+from map_builder import finalize_map
+
+m = finalize_map(m)
+m  # display in Quarto
+```
+
+### Full map example (database → rendered map)
+
+```python
+from db_connection import query_to_geodataframe
+from map_builder import create_base_map, add_geodataframe_layer, finalize_map
+
+# 1. Query
+gdf = query_to_geodataframe("""
+    SELECT id, name, category, geom
+    FROM parks.boundaries
+""")
+
+# 2. Build map
+m = create_base_map(gdf=gdf, zoom=11, tiles="positron")
+m = add_geodataframe_layer(
+    m, gdf,
+    name="Parks",
+    tooltip_fields=["name", "category"],
+    style={"color": "#22c55e", "weight": 2, "fillOpacity": 0.25},
+)
+m = finalize_map(m)
+
+# 3. Display
+m
+```
+
+---
+
+## 3. Analysis template {#sec-analysis}
+
+**File:** `research/analysis/analysis-template.qmd`
+
+**Purpose:** Exploratory data analysis — quick spatial summaries, maps, and charts. This is your scratch pad for testing queries, iterating on visualizations, and building intuition about your data.
+
+### When to use it
+
+- Starting a new spatial analysis or question
+- Prototyping map styles before committing to a report
+- Running EDA: distributions, outliers, spatial patterns
+- Comparing datasets or time periods
+
+### How to use it
+
+1. **Copy** the template for each new analysis:
+
+   ```bash
+   cp analysis/analysis-template.qmd analysis/my-analysis-name.qmd
+   ```
+
+2. **Update the YAML header** — change the title and subtitle.
+
+3. **Connect to your data** — uncomment and modify the PostGIS section, or load local files.
+
+4. **Iterate** — add cells, build maps, summarize tables. Keep the decision log updated.
+
+5. **Render**:
+
+   ```bash
+   quarto render analysis/my-analysis-name.qmd
+   ```
+
+### Template walkthrough
+
+| Section | What it does |
+|---|---|
+| **Environment** | Prints Python/package versions for reproducibility |
+| **Connect to PostGIS** | `db_connection` module queries — `eval: false` by default |
+| **Load sample data** | Natural Earth fallback so the template renders out of the box |
+| **Static map** | Matplotlib thematic map (good for quick checks) |
+| **Interactive map** | Folium via `map_builder` module — styled, with tooltips |
+| **PostGIS map** | Same pattern but sourced from your database |
+| **Summary table** | Grouped aggregation example |
+| **Decision log** | Freeform notes — data sources, CRS choices, assumptions |
+
+### Tips
+
+- Keep `code-fold: true` so the rendered HTML is readable by non-technical stakeholders.
+- Use `#| eval: false` on PostGIS cells until your `.env` is configured.
+- When an analysis stabilizes, promote its key outputs to a **report**.
+
+---
+
+## 4. Report template {#sec-reports}
+
+**File:** `research/reports/report-template.qmd`
+
+**Purpose:** Client- or leadership-ready deliverables. Numbered sections, executive summary up front, polished maps and figures.
+
+### When to use it
+
+- Presenting findings to stakeholders
+- Documenting a completed analysis with recommendations
+- Creating a record that needs to be archived or shared
+
+### How to use it
+
+1. **Copy** the template:
+
+   ```bash
+   cp reports/report-template.qmd reports/my-report-name.qmd
+   ```
+
+2. **Update the YAML header** — title, subtitle, author.
+
+3. **Fill in the executive summary first** — forces you to know your story before writing details.
+
+4. **Wire up PostGIS queries** in the "Data acquisition" section.
+
+5. **Build your key map** using `map_builder` functions.
+
+6. **Include inserts** for reusable content — the template already includes `methods-block.qmd` and `figure-callout.qmd`.
+
+7. **Render**:
+
+   ```bash
+   quarto render reports/my-report-name.qmd
+   ```
+
+### Template walkthrough
+
+| Section | What it does |
+|---|---|
+| **Setup cell** (hidden) | Imports `db_connection` and `map_builder` — `echo: false` |
+| **Executive summary** | 3-bullet structure: what changed, what matters, what's next |
+| **Context and objectives** | Decision context and research questions |
+| **Data and methods** | Includes `methods-block.qmd` insert + data acquisition cell |
+| **Results** | Key map (Folium) + key figure (Plotly via insert) |
+| **Interpretation** | Drivers, confounders, sensitivity checks |
+| **Recommendations** | Numbered actions with owners and expected impact |
+| **Appendix** | Reproducibility info + references |
+
+### Report vs. analysis — when to use which
+
+| | Analysis | Report |
+|---|---|---|
+| **Audience** | You / your team | Stakeholders / clients |
+| **Sections** | Freeform | Numbered, structured |
+| **Code visibility** | Folded but present | Hidden setup, key code shown |
+| **Decision log** | Active, updated as you go | Not included |
+| **Polish level** | Working draft | Final deliverable |
+
+---
+
+## 5. Reusable inserts {#sec-inserts}
+
+**Folder:** `research/inserts/`
+
+Inserts are drop-in `.qmd` blocks you include in any document using the Quarto shortcode:
+
+```markdown
+{{< include ../inserts/map-block.qmd >}}
+```
+
+### Available inserts
+
+| File | Purpose |
+|---|---|
+| `map-block.qmd` | A Folium world map in a callout — quick visual |
+| `figure-callout.qmd` | A Plotly bar chart in a callout — with interpretation notes |
+| `methods-block.qmd` | A structured methods section — inputs, processing, validation |
+
+### Creating your own inserts
+
+1. Create a new `.qmd` file in `research/inserts/`.
+2. Wrap content in a callout if you want visual framing:
+
+   ```markdown
+   ::: {.callout-tip}
+   ## My Custom Block
+
+   Your content here (code cells, text, images).
+   :::
+   ```
+
+3. Include it in any document:
+
+   ```markdown
+   {{< include ../inserts/my-custom-block.qmd >}}
+   ```
+
+### When to create an insert
+
+- You're copying the same code/text into multiple documents
+- You want a standardized map style or figure format across reports
+- You need a boilerplate section (disclaimers, methods, data dictionaries)
+
+---
+
+## 6. Putting it all together {#sec-workflow}
+
+### Typical workflow
+
+```
+1. Start an analysis
+   └─ cp analysis/analysis-template.qmd analysis/flood-risk-eda.qmd
+
+2. Explore your data
+   └─ Query PostGIS → build maps → summarize tables
+   └─ Update the decision log as you go
+
+3. Stabilize key outputs
+   └─ Extract reusable maps/figures into inserts/
+
+4. Write the report
+   └─ cp reports/report-template.qmd reports/flood-risk-report.qmd
+   └─ Include your polished inserts
+   └─ Write executive summary + recommendations
+
+5. Render standalone HTML
+   └─ quarto render reports/flood-risk-report.qmd
+   └─ Output: research/_output/flood-risk-report.html (self-contained)
+
+6. Share
+   └─ Email the HTML file, or publish via docs site
+```
+
+### Rendering commands
+
+```bash
+# Single document
+quarto render analysis/my-analysis.qmd
+
+# Preview with live reload
+quarto preview analysis/my-analysis.qmd
+
+# Render all research documents
+cd research && quarto render
+
+# Render and preview the docs site
+cd docs && quarto preview
+```
+
+### Project structure (updated)
+
+```
+quarto-gis/
+  CLAUDE.md                ← project context (persistent across sessions)
+  TASKS.md                 ← task tracker
+  research/
+    db_connection.py       ← PostGIS → DataFrame/GeoDataFrame
+    map_builder.py         ← reusable Folium map functions
+    .env                   ← database credentials (never committed)
+    .env.example           ← credential template
+    _quarto.yml
+    _brand.yml
+    theme.scss
+    requirements.txt
+    analysis/
+      analysis-template.qmd
+    reports/
+      report-template.qmd
+      references.bib
+    inserts/
+      map-block.qmd
+      figure-callout.qmd
+      methods-block.qmd
+  docs/
+    guides/
+      workflow.qmd         ← this guide
+      setup.qmd
+      gis-visuals.qmd
+      publishing.qmd
+```
+
+---
+
+## 7. Key considerations {#sec-considerations}
+
+**Credentials** — Always use `.env` + `python-dotenv`. Never hardcode passwords. The `db_connection.py` module handles this for you.
+
+**CRS** — Use EPSG:4326 (WGS84) for all web maps and Folium output. Use a local projected CRS (e.g., UTM) when computing distances or areas in PostGIS.
+
+**Performance** — For large datasets, use `ST_Simplify()` in your SQL to reduce geometry complexity before sending to Folium. Use `LIMIT` during development. Quarto's `cache: true` and `freeze: auto` avoid re-running expensive queries on every render.
+
+**Standalone output** — All templates use `embed-resources: true`, producing a single self-contained HTML file with no external dependencies. You can email it, archive it, or drop it on a file share.
+
+**Multiple maps** — Create as many Folium map objects as you need in a single document. Each renders independently. Use `map_builder` functions to keep the code consistent.

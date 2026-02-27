@@ -1,0 +1,20 @@
+---
+title: "Home"
+---
+
+## What this is
+
+A small docs site that describes how to use the **research templates** and how to keep GIS
+visualization work reproducible and consistent.
+
+## Quick links
+
+- [Setup](guides/setup.qmd)
+- [GIS Visuals](guides/gis-visuals.qmd)
+- [Publishing](guides/publishing.qmd)
+
+## Suggested convention
+
+- Exploratory notebooks live in `research/analysis/`
+- Decision-grade outputs live in `research/reports/`
+- Reusable modules live in `research/inserts/`

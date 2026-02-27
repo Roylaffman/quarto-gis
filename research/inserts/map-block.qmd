@@ -1,0 +1,18 @@
+::: {.callout-tip}
+## Map (drop-in block)
+
+```{python}
+import geopandas as gpd
+import folium
+
+world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres")).to_crs(4326)
+
+m = folium.Map(location=[20, 0], zoom_start=2, tiles="CartoDB positron")
+folium.GeoJson(
+    world[["name", "geometry"]],
+    tooltip=folium.GeoJsonTooltip(fields=["name"]),
+).add_to(m)
+
+m
+```
+:::

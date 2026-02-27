@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Rome",
+    "lat": 41.8933,
+    "lon": 12.4829,
+    "description": "Caput Mundi — the center of the Roman road network. All major viae radiated from the Milliarium Aureum (Golden Milestone) in the Forum Romanum, the symbolic point from which all distances in the empire were measured.",
+    "category": "Capital",
+    "photo_url": "",
+    "photo_caption": "",
+    "source": ""
+  },
+  {
+    "name": "Delphi",
+    "lat": 38.4824,
+    "lon": 22.5010,
+    "description": "Sacred sanctuary of Apollo and seat of the famous Oracle, Delphi sat at the crossroads of ancient Greek and later Roman road networks. The Romans maintained the sanctuary and its road connections after conquering Greece in 146 BCE.",
+    "category": "Sanctuary",
+    "photo_url": "",
+    "photo_caption": "",
+    "source": ""
+  },
+  {
+    "name": "Via Appia at Minturnae",
+    "lat": 41.2578,
+    "lon": 13.7461,
+    "description": "Preserved basalt paving stones of the Via Appia at the ancient colony of Minturnae, where the road crossed the Liris River on its way south to Capua.",
+    "category": "Road Feature",
+    "photo_url": "",
+    "photo_caption": "",
+    "source": ""
+  },
+  {
+    "name": "Pont du Gard",
+    "lat": 43.9473,
+    "lon": 4.5354,
+    "description": "Roman aqueduct bridge in southern Gaul, part of the road infrastructure network supporting the Via Domitia. Built in the 1st century CE, it stands as the highest surviving Roman aqueduct.",
+    "category": "Infrastructure",
+    "photo_url": "",
+    "photo_caption": "",
+    "source": ""
+  },
+  {
+    "name": "Porta Nigra, Trier",
+    "lat": 49.7596,
+    "lon": 6.6447,
+    "description": "The Black Gate of Augusta Treverorum (modern Trier), a massive Roman city gate built c. 170 CE. It marks the northern terminus of one of the empire's key road corridors through Gaul.",
+    "category": "City Gate",
+    "photo_url": "",
+    "photo_caption": "",
+    "source": ""
+  }
+]

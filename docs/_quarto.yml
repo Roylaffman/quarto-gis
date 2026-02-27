@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Quarto GIS Research Docs"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: guides/workflow.qmd
+        text: Workflow Guide
+      - href: guides/setup.qmd
+        text: Setup
+      - href: guides/gis-visuals.qmd
+        text: GIS Visuals
+      - href: guides/publishing.qmd
+        text: Publishing
+  page-footer:
+    left: "Built with Quarto"
+    right: "HTML-first GIS research workflow"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    toc: true
+    embed-resources: true
+    smooth-scroll: true
+    link-external-newwindow: true

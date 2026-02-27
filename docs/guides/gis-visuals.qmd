@@ -1,0 +1,41 @@
+---
+title: "GIS Visuals"
+---
+
+## Static vs interactive
+
+- **Static**: Matplotlib, GeoPandas `.plot()` → stable, fast, great for PDFs too.
+- **Interactive**: Folium/Leaflet, Plotly → best for HTML reporting and exploration.
+
+## CRS recommendations
+
+- Use **EPSG:4326** (WGS84) for most web maps and interactive outputs.
+- Use local projected CRS (e.g., UTM) for **distance/area** calculations.
+
+## A minimal GeoPandas pipeline (pattern)
+
+```{python}
+import geopandas as gpd
+
+gdf = gpd.read_file("path/to/your.geojson")  # or shapefile, geopackage, etc.
+gdf = gdf.to_crs(4326)  # web-friendly
+```
+
+## Folium layering pattern
+
+```{python}
+import folium
+
+m = folium.Map(location=[39, -98], zoom_start=4, tiles="CartoDB positron")
+folium.GeoJson(gdf).add_to(m)
+folium.LayerControl().add_to(m)
+m
+```
+
+## Make outputs reusable with inserts
+
+If you keep reusing the same map style/legend, put it in `research/inserts/` and include it.
+
+```markdown
+{{< include ../research/inserts/map-block.qmd >}}
+```

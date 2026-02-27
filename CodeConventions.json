@@ -1,0 +1,72 @@
+{
+	"version": "1.0",
+	"description": "Code conventions for team alignment - distilled from SpockStandards",
+	"indentation": {
+		"rule": "Tabs, not spaces",
+		"applies_to": ["python", "powershell", "javascript", "sql", "vba"]
+	},
+	"naming_conventions": {
+		"python": {
+			"functions": "snake_case",
+			"variables": "snake_case",
+			"classes": "PascalCase",
+			"constants": "UPPER_SNAKE_CASE",
+			"private_methods": "_leading_underscore"
+		},
+		"javascript": {
+			"functions": "camelCase",
+			"variables": "camelCase",
+			"classes": "PascalCase",
+			"constants": "UPPER_SNAKE_CASE"
+		},
+		"sql": {
+			"tables": "snake_case, plural",
+			"columns": "snake_case",
+			"indexes": "idx_table_column"
+		}
+	},
+	"script_design": {
+		"configuration": "Use a Config class for configurable settings",
+		"windows_console": "Must wait for user input before exiting",
+		"error_handling": "Graceful failures with user-friendly messages"
+	},
+	"code_quality": {
+		"modularity": "Single-responsibility functions/classes",
+		"readability": "Self-documenting with clear naming",
+		"dry_principle": "Eliminate code duplication",
+		"documentation": "Document complex functions with docstrings"
+	},
+	"security_checklist": {
+		"sql_injection": "Always use parameterized queries",
+		"path_traversal": "Validate and sanitize file paths",
+		"command_injection": "Never use shell=True with user input",
+		"credentials": "Never hardcode credentials or API keys",
+		"input_validation": "Validate all external input"
+	},
+	"anti_patterns": {
+		"python": {
+			"mutable_defaults": {
+				"bad": "def f(items=[])",
+				"good": "def f(items=None): items = items or []"
+			},
+			"bare_except": {
+				"bad": "except:",
+				"good": "except (ValueError, TypeError) as e:"
+			}
+		},
+		"sql": {
+			"select_star": {
+				"bad": "SELECT * FROM users",
+				"good": "SELECT id, name, email FROM users"
+			},
+			"string_concatenation": {
+				"bad": "f\"SELECT * FROM {table}\"",
+				"good": "cursor.execute(\"SELECT * FROM ?\", (table,))"
+			}
+		}
+	},
+	"authorship": {
+		"rule": "Author attribution: Nathan Askins",
+		"applies_to": ["docstrings", "headers", "frontmatter"]
+	}
+}

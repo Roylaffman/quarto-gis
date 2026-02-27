@@ -1,0 +1,40 @@
+---
+title: "Publishing"
+---
+
+## HTML output strategies
+
+### Single-file (portable)
+Set:
+
+```yaml
+format:
+  html:
+    embed-resources: true
+```
+
+This produces a standalone HTML file with embedded assets.
+
+### Multi-file (lighter weight)
+Set:
+
+```yaml
+format:
+  html:
+    embed-resources: false
+```
+
+This produces an HTML file plus a `_files/` folder.
+
+## Sharing options
+
+- Email the standalone HTML output (`embed-resources: true`)
+- Publish the documentation site (`docs/_site/`) via:
+  - GitHub Pages
+  - Internal web server
+  - Static hosting (S3/GCS/Azure)
+
+## Reproducibility
+
+- Prefer `freeze: auto` in `_quarto.yml` for stable builds.
+- Commit the `.qmd` sources and any scripts/data inputs (or document where they live).

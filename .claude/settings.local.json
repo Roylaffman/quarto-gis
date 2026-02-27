@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c:*)",
+      "Bash(pip install:*)",
+      "Bash(python roman_roads_harvester.py:*)",
+      "WebFetch(domain:data.ca.gov)",
+      "WebFetch(domain:www.epa.gov)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:data.usgs.gov)"
+    ]
+  }
+}

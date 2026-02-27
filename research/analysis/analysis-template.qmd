@@ -1,0 +1,158 @@
+---
+title: "GIS Analysis Template"
+subtitle: "Exploration • EDA • Rapid GIS visuals"
+author: "Ryan Lafferty"
+date: last-modified
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-summary: "Show code"
+    embed-resources: true
+jupyter: python3
+---
+
+## Purpose
+
+Use this template for exploratory analysis: quick spatial summaries, maps, and charts.
+Promote stable outputs to the **Report Template** when you're ready.
+
+> Tip: keep a short **decision log** as you go — it's invaluable later.
+
+---
+
+## Environment
+
+```{python}
+import sys, platform
+sys.path.append("..")  # so imports resolve from analysis/ → research/
+
+import pandas as pd
+import geopandas as gpd
+
+print("Python:", sys.version.split()[0])
+print("Platform:", platform.platform())
+print("GeoPandas:", gpd.__version__)
+```
+
+---
+
+## Connect to PostGIS
+
+Load credentials from `.env` and query spatial data using the shared `db_connection` module.
+
+```{python}
+#| eval: false
+from db_connection import query_to_geodataframe, query_to_dataframe
+
+# --- Spatial query → GeoDataFrame ---
+gdf = query_to_geodataframe("""
+    SELECT
+        id,
+        name,
+        geom
+    FROM your_schema.your_table
+    WHERE condition = 'value'
+    LIMIT 500
+""")
+gdf.head()
+```
+
+```{python}
+#| eval: false
+# --- Tabular query → DataFrame (no geometry) ---
+df = query_to_dataframe("""
+    SELECT id, name, attribute1, attribute2
+    FROM your_schema.your_table
+""")
+df.head()
+```
+
+---
+
+## Load sample GIS data (Natural Earth)
+
+This uses the Natural Earth dataset bundled with GeoPandas.
+
+```{python}
+world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
+world = world.to_crs(4326)  # WGS84 for web maps
+world.head()
+```
+
+---
+
+## Quick thematic map (static)
+
+```{python}
+import matplotlib.pyplot as plt
+
+ax = world.plot(column="gdp_md_est", legend=True)
+ax.set_title("GDP (estimated) by country")
+ax.set_axis_off()
+plt.show()
+```
+
+---
+
+## Interactive map (Folium — using map_builder)
+
+```{python}
+from map_builder import create_base_map, add_geodataframe_layer, finalize_map
+
+m = create_base_map(center=[39.0, -98.0], zoom=3, tiles="positron")
+m = add_geodataframe_layer(
+    m, world,
+    name="Countries",
+    tooltip_fields=["name", "pop_est", "gdp_md_est"],
+    style={"color": "#0ea5e9", "weight": 1, "fillOpacity": 0.3},
+    highlight={"weight": 3, "fillOpacity": 0.6},
+)
+m = finalize_map(m)
+m
+```
+
+---
+
+## Interactive map (PostGIS data)
+
+Uncomment once your `.env` and database are configured.
+
+```{python}
+#| eval: false
+from map_builder import create_base_map, add_geodataframe_layer, add_point_markers, finalize_map
+from db_connection import query_to_geodataframe
+
+gdf = query_to_geodataframe("""
+    SELECT id, name, geom
+    FROM your_schema.your_table
+""")
+
+m = create_base_map(gdf=gdf, zoom=10)
+m = add_geodataframe_layer(m, gdf, name="My Data", tooltip_fields=["name"])
+m = finalize_map(m)
+m
+```
+
+---
+
+## A repeatable summary table
+
+```{python}
+summary = (
+    world[["continent", "pop_est", "gdp_md_est"]]
+    .groupby("continent", dropna=False)
+    .agg(pop_est=("pop_est", "sum"), gdp_md_est=("gdp_md_est", "sum"))
+    .sort_values("gdp_md_est", ascending=False)
+)
+summary
+```
+
+---
+
+## Notes / decision log
+
+- **Data sources**:
+- **CRS choices**:
+- **Assumptions**:
+- **Next steps**:

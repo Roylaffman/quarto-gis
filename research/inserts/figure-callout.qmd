@@ -1,0 +1,25 @@
+::: {.callout-important}
+## Figure (drop-in block)
+
+```{python}
+import geopandas as gpd
+import pandas as pd
+import plotly.express as px
+
+world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
+
+df = (
+    world[["continent", "gdp_md_est"]]
+    .groupby("continent", dropna=False)
+    .sum(numeric_only=True)
+    .reset_index()
+    .sort_values("gdp_md_est", ascending=False)
+)
+
+fig = px.bar(df, x="continent", y="gdp_md_est", title="Total GDP (estimated) by continent")
+fig
+```
+
+**Interpretation notes**
+- Add 1–3 bullet insights here.
+:::

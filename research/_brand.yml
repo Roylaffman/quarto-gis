@@ -1,0 +1,37 @@
+meta:
+  name: "Quarto GIS Research"
+  description: "HTML-first analysis, reports, and reusable inserts for GIS work."
+
+color:
+  palette:
+    ink: "#1f2937"
+    slate: "#64748b"
+    ocean: "#0ea5e9"
+    moss: "#22c55e"
+    ember: "#f97316"
+    rose: "#f43f5e"
+    paper: "#ffffff"
+    fog: "#f3f4f6"
+  primary: ocean
+  secondary: slate
+  success: moss
+  info: ocean
+  warning: ember
+  danger: rose
+  light: fog
+  dark: ink
+
+typography:
+  fonts:
+    - family: Inter
+      source: google
+    - family: JetBrains Mono
+      source: google
+  base:
+    family: Inter
+    size: 16px
+    line-height: 1.55
+  headings:
+    family: Inter
+  monospace:
+    family: JetBrains Mono

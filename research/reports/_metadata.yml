@@ -1,0 +1,8 @@
+format:
+  html:
+    toc: true
+    number-sections: true
+    code-fold: false
+    page-layout: full
+execute:
+  cache: true

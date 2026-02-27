@@ -1,0 +1,53 @@
+{
+	"version": "1.0",
+	"description": "File and directory conventions for team alignment - distilled from AlfredStandards",
+	"directory_naming": {
+		"convention": "PascalCase",
+		"examples": ["AgentWork/", "TeamKnowledge/", "Scripts/", "Reports/"]
+	},
+	"system_folders": {
+		"convention": "Dot-prefix",
+		"examples": [".staging/", ".cache/", ".archive/"],
+		"never": "_underscore prefix (causes Markdown rendering issues)"
+	},
+	"file_naming": {
+		"python": {
+			"convention": "snake_case.py",
+			"examples": ["data_processor.py", "validate_input.py"]
+		},
+		"markdown": {
+			"convention": "PascalCase.md",
+			"examples": ["WorkflowGuide.md", "ProjectOverview.md"]
+		},
+		"json": {
+			"convention": "PascalCase.json",
+			"examples": ["ProjectSettings.json", "UserConfig.json"]
+		},
+		"reports": {
+			"convention": "Description_YYYY-MM-DD.md",
+			"examples": ["StatusUpdate_2026-01-27.md", "AuditReport_2026-01-27.md"],
+			"critical": "Timestamps are ALWAYS suffixes, never prefixes"
+		}
+	},
+	"versioning": {
+		"working_file": "Base name only (no version suffix)",
+		"before_editing": "Create versioned backup (file_v1.2.ext)",
+		"editing": "Always edit the base file, not the version",
+		"version_format": "_vX.Y (e.g., _v1.0, _v1.1, _v2.0)",
+		"anti_pattern": {
+			"problem": "Only versioned files exist, no base file",
+			"wrong": ["doc_v0.1.md", "doc_v0.2.md", "doc_v0.3.md"],
+			"correct": ["doc.md", "doc_v0.2.md", "doc_v0.1.md"]
+		}
+	},
+	"markdown_rules": {
+		"horizontal_rules": {
+			"rule": "Never use --- or *** or ___",
+			"alternative": "Use headings (##, ###) for section separation"
+		},
+		"authorship": {
+			"rule": "Author attribution: DEA Team Member's name",
+			"never": "Agent names in author fields"
+		}
+	}
+}

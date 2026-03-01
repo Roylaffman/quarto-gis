@@ -7,7 +7,8 @@
       "WebFetch(domain:data.ca.gov)",
       "WebFetch(domain:www.epa.gov)",
       "WebFetch(domain:commons.wikimedia.org)",
-      "WebFetch(domain:data.usgs.gov)"
+      "WebFetch(domain:data.usgs.gov)",
+      "WebFetch(domain:catalog.data.gov)"
     ]
   }
 }

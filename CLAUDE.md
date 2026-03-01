@@ -183,9 +183,38 @@ The `critical-minerals.qmd` is a narrative story map with 10 sections:
 
 Map styling: positron tile, Lithium=#22c55e green, Rare Earth=#f97316 orange, Strategic Metals=#0ea5e9 blue. Icons by status (industry/wrench/check-circle/flask/question-circle). No PostGIS dependency — JSON-only data approach.
 
+## Rana boylii Document Structure
+The `rana-boylii.qmd` is a narrative story map with 10 sections:
+
+1. **The Sentinel of the Streams** — intro narrative (ecological indicator species, range loss 45-55%, ESA listings 2023-2024)
+2. **Data & Setup** — imports + load all 5 layers (CA, range, clades, ecoregions, GBIF CSV)
+3. **The Habitat** — narrative (lotic ecosystems, cobble substrate, flow regime, riparian vegetation)
+4. **Range & Management Units** — ESA status table by clade (6 CDFW clades → 4 DPS) + ecoregion summary table
+5. **The Frog's Territory** — Folium interactive map (4 toggleable layers: EPA ecoregions, CDFW range, clade boundaries, GBIF heatmap)
+6. **A Shrinking Map** — Plotly bar (GBIF observations by decade) + narrative on spatial decline patterns
+7. **Why the Frogs Are Disappearing** — narrative (4 threats: dams, invasives, climate, conservation paradox)
+8. **The Four DPS and Their Status** — Plotly horizontal bar (range loss %) + DPS status table
+9. **Static Overview** — matplotlib map in EPSG:3310 (CA Albers) with ecoregions, range, clade outlines, thinned GBIF points
+10. **Data Sources & Bibliography** — CDFW ds589/ds2865, EPA ecoregions, GBIF, USFWS ESA listings, Welsh/McCartney-Melstad/Hayes literature
+
+Data files (downloaded once by `download_rana_boylii_data.py`):
+- `data/rana_boylii/california.geojson` (85 KB, Natural Earth fallback)
+- `data/rana_boylii/rana_boylii_range.geojson` (9,967 KB, 1 feature, CDFW CWHR ds589)
+- `data/rana_boylii/rana_boylii_clades.geojson` (8,803 KB, 6 clades, CDFW ds2865)
+- `data/rana_boylii/ca_ecoregions.geojson` (10,388 KB, 11 ecoregions, EPA ArcGIS REST)
+- `data/rana_boylii/rana_boylii_occurrences.csv` (518 KB, 6,253 GBIF points)
+
+Map styling: positron tile, range=#22c55e fill (0.25 opacity), clade dashed outlines by ESA status (Endangered=rose/orange, Threatened=amber/ocean, Not Listed=moss/purple). GBIF as HeatMap (avoids point_to_layer serialization error). `simplify(0.005)` on range/clades/ecoregions. Static map in EPSG:3310 (CA Albers).
+
+ESA DPS mapping: South Coast=Endangered, South Sierra=Endangered, North Feather=Threatened, Central CA Coast=Threatened, Northwest/Northeast=Not Listed.
+
+Key bug fix: `point_to_layer` lambda in `folium.GeoJson` causes `TypeError: Object of type function is not JSON serializable` — replaced with `HeatMap` from `folium.plugins`.
+
 ## Next Session Plan
 - Add site photos to CriticalMineralsSites.json
 - Add POI photos and expand narrative sections in roman-roads.qmd
 - Further map styling refinements as needed
 - Optimize Everglades coastline rendering (simplify geometry, filter to extent)
 - Set up git repo and .gitignore
+- Create Substack article for Rana boylii (SubstackRanaBoylii.md)
+- Consider adding watershed layer (HUC-8) to rana-boylii.qmd

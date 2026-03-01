@@ -1,0 +1,424 @@
+---
+title: "The Great Barays of Angkor"
+subtitle: "Monumental Hydraulic Engineering of the Khmer Empire"
+author: "Lafferty"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+    self-contained: true
+    fig-cap-location: bottom
+    smooth-scroll: true
+    page-layout: full
+execute:
+  echo: false
+  warning: false
+---
+
+```{=html}
+<style>
+  .comparison-table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+  .comparison-table th, .comparison-table td { padding: 10px 14px; border: 1px solid #ddd; text-align: left; }
+  .comparison-table th { background-color: #2c3e50; color: white; }
+  .comparison-table tr:nth-child(even) { background-color: #f8f9fa; }
+  .highlight-box { background: #eef6fc; border-left: 4px solid #2980b9; padding: 1em 1.2em; margin: 1.5em 0; border-radius: 4px; }
+  .source-box { background: #f0f9f0; border-left: 4px solid #27ae60; padding: 1em 1.2em; margin: 1.5em 0; border-radius: 4px; }
+  .coordinate-box { background: #fdf5e6; border-left: 4px solid #e67e22; padding: 1em 1.2em; margin: 1.5em 0; border-radius: 4px; font-family: monospace; }
+</style>
+```
+
+## Introduction
+
+The Angkor Archaeological Park in northwest Cambodia — a UNESCO World Heritage Site covering over 400 square kilometers — contains some of the most ambitious hydraulic engineering achievements of the pre-industrial world. Among these, the **barays** (massive artificial reservoirs) stand as enduring testimony to the organizational capacity, engineering sophistication, and cosmological vision of the Khmer Empire (9th–15th century CE).
+
+This report focuses on the two largest barays at Angkor: the **East Baray** (Yashodharatataka) and the **West Baray** (Baray Teuk Thla). Together they represent over two centuries of evolving water management strategy, a system that sustained one of the most populous pre-industrial cities on Earth — estimated at up to one million inhabitants at its peak.
+
+The barays were not simply utilitarian reservoirs. They were deeply embedded in Hindu-Buddhist cosmology, symbolizing the primordial oceans surrounding Mount Meru, the mythical home of the gods. Temples built on artificial islands at their centers reinforced this sacred geography. Understanding the barays requires reading them as both engineering marvels and spiritual landscapes.
+
+---
+
+## The East Baray (Yashodharatataka)
+
+### Historical Context
+
+The East Baray was constructed around **900 CE** during the reign of **King Yasovarman I**, who also founded the capital of Yashodharapura. It was the second major baray built in the Angkor region, following the smaller Indratataka at Roluos (completed 889 CE, measuring 3.8 km × 880 m). The East Baray was originally called **Yashodharatataka** after its royal patron.
+
+Yasovarman moved the capital from Hariharalaya (near modern Roluos) northward to the area that would become Angkor. The East Baray was built to guarantee a regular water supply for this new city. It was fed by the **Siem Reap River**, which flows south from the Kulen Hills — the sacred mountain range where Jayavarman II had declared Khmer independence in 802 CE.
+
+Inscription stones marking the construction have been found at all four corners of the reservoir, documenting its creation and consecration.
+
+### Physical Dimensions
+
+<div class="coordinate-box">
+**Approximate Center:** 13.434°N, 103.926°E<br>
+**Orientation:** East–West<br>
+**Dimensions:** ~7.5 km × 1.83 km (4.6 mi × 1.1 mi)<br>
+**Capacity:** ~50–55 million m³ of water<br>
+**Dike Fill Volume:** ~8 million m³ of earth
+</div>
+
+The labor required for its construction was staggering. The embankment dikes alone contain approximately 8 million cubic meters of fill — moved and compacted entirely by human labor. The baray was created by diverting and containing the natural flow of water across the Angkor plain using massive earthen embankments.
+
+### The East Mebon Temple
+
+At the center of the East Baray stands the **East Mebon**, a 10th-century Hindu temple built in **953 CE** by the architect and guru **Kavindrarimathana**, Buddhist minister of **King Rajendravarman II**. An inscription records the exact dedication: Friday, 28 January 953, at 11 AM.
+
+The temple was built on an artificial island of approximately 120 meters across and was originally accessible only by boat. It features a classic "temple-mountain" form symbolizing Mount Meru, with a three-meter-high central platform carrying a quincunx of towers. Laterite landing platforms flanked by guardian lions mark where boats would have docked — there are notably no stone stairs to the current ground level, since visitors arrived by water.
+
+The main entry pavilion of the Royal Palace and the Victory Gate of Angkor Thom were later aligned along the same east-west axis as the East Mebon, indicating its enduring importance in Angkorian urban planning.
+
+### Current Status
+
+The East Baray is **completely dry today**. Farmers cultivate rice and other crops on its bed. However, its rectangular outlines remain clearly visible in satellite imagery and aerial photographs — the earthen embankments persist as elevated ridges across the landscape. The East Mebon now rises from rice paddies rather than water.
+
+On the eastern side, a large laterite structure called **Krol Romeas** served as an outlet or inlet depending on the season. On the western bank, a large sandstone and laterite terrace — cruciform in layout — once had steps leading down to the water's edge, with ornate lion statues at the waterline.
+
+---
+
+## The West Baray (Baray Teuk Thla)
+
+### Historical Context
+
+The West Baray was constructed beginning in the **early 11th century** under **King Suryavarman I** and completed during the reign of his successor **King Udayadityavarman II**. It was built because the earlier East Baray could no longer reliably support the expanding Angkor Empire's water needs.
+
+The West Baray was fed by two main water sources: the **Siem Reap River** and the **Puok River**. Its construction incorporated, destroyed, or submerged earlier sites:
+
+- The **east dike** largely reused a section of the dike that had enclosed Yasovarman's capital city (centered on Phnom Bakheng temple)
+- The **south dike** partially buried the brick pyramid temple **Ak Yum** (dating to the 8th century or earlier)
+- The **western floor** had been inhabited — archaeological work uncovered wall bases, steps, and pottery shards, along with a stele inscription from 713 CE describing rice fields offered to Queen Jayadevi
+
+### Physical Dimensions
+
+<div class="coordinate-box">
+**Approximate Center:** 13.414°N, 103.814°E<br>
+**Orientation:** East–West<br>
+**Dimensions:** ~7.8 km × 2.1 km (4.8 mi × 1.3 mi)<br>
+**Maximum Capacity:** ~53 million m³ (~14 billion US gallons)<br>
+**Dike Height:** up to 11.9 meters
+</div>
+
+The West Baray is the **largest baray at Angkor** and one of the largest hand-excavated reservoirs on Earth. Its perfectly rectangular form, oriented precisely east-west, reflects both engineering precision and cosmological intent.
+
+### The West Mebon Temple
+
+The **West Mebon** is a Hindu temple constructed on an artificial island at the center of the baray by Udayadityavarman II. It shares architectural characteristics with the **Baphuon** temple at Angkor Thom.
+
+The most significant find at the West Mebon was a large **bronze statue of Vishnu Reclining** (Vishnu Anantashayin), now exhibited at the **National Museum of Cambodia** in Phnom Penh. This iconography — Vishnu resting on the cosmic ocean — perfectly aligns with the baray-as-cosmic-ocean symbolism central to Angkorian cosmology.
+
+### Current Status
+
+The West Baray **still holds water today**, particularly in its western end, where water persists year-round. During the rainy season, water advances eastward to fill most of the reservoir. A modern irrigation lock installed in the southern dike raises the water level and provides water to agricultural fields to the south.
+
+Today the baray serves as a popular local recreation site — residents of Siem Reap visit for swimming, boat rides, and picnics. It has even been used as a landing site for seaplanes. The West Mebon temple is accessible by boat in the wet season and on foot during the dry season when water levels recede.
+
+---
+
+## Comparative Analysis
+
+<table class="comparison-table">
+<tr>
+  <th>Attribute</th>
+  <th>East Baray</th>
+  <th>West Baray</th>
+</tr>
+<tr>
+  <td><strong>Khmer Name</strong></td>
+  <td>Yashodharatataka (បារាយណ៍​ខាងកើត)</td>
+  <td>Baray Teuk Thla (បារាយណ៍ទឹកថ្លា)</td>
+</tr>
+<tr>
+  <td><strong>Date Built</strong></td>
+  <td>~900 CE (Yasovarman I)</td>
+  <td>Early 11th c. (Suryavarman I / Udayadityavarman II)</td>
+</tr>
+<tr>
+  <td><strong>Dimensions</strong></td>
+  <td>~7.5 km × 1.83 km</td>
+  <td>~7.8 km × 2.1 km</td>
+</tr>
+<tr>
+  <td><strong>Capacity</strong></td>
+  <td>~50–55 million m³</td>
+  <td>~53 million m³</td>
+</tr>
+<tr>
+  <td><strong>Center Temple</strong></td>
+  <td>East Mebon (953 CE)</td>
+  <td>West Mebon (11th c.)</td>
+</tr>
+<tr>
+  <td><strong>Water Source</strong></td>
+  <td>Siem Reap River (Kulen Hills)</td>
+  <td>Siem Reap River + Puok River</td>
+</tr>
+<tr>
+  <td><strong>Water Today</strong></td>
+  <td>Completely dry</td>
+  <td>Partially filled year-round</td>
+</tr>
+<tr>
+  <td><strong>Approx. Center Lat/Lon</strong></td>
+  <td>13.434°N, 103.926°E</td>
+  <td>13.414°N, 103.814°E</td>
+</tr>
+<tr>
+  <td><strong>Position relative to Angkor Thom</strong></td>
+  <td>East</td>
+  <td>West</td>
+</tr>
+<tr>
+  <td><strong>Modern Use</strong></td>
+  <td>Agriculture (rice fields on bed)</td>
+  <td>Irrigation, recreation, tourism</td>
+</tr>
+</table>
+
+---
+
+## The Hydraulic System in Context
+
+The barays did not operate in isolation. They were nodes in an interconnected hydraulic network of canals, moats, embankments, and smaller reservoirs (called *srang*) that managed water across the entire Angkor plain.
+
+### The Four Major Barays of Angkor
+
+Chronologically, the four great barays are:
+
+1. **Indratataka** (889 CE) — 3.8 km × 880 m — at Roluos, now dry; temple: Lolei
+2. **East Baray / Yashodharatataka** (~900 CE) — 7.5 km × 1.83 km — now dry; temple: East Mebon
+3. **West Baray / Baray Teuk Thla** (~11th c.) — 7.8 km × 2.1 km — still holds water; temple: West Mebon
+4. **Jayatataka / North Baray** (late 12th c.) — ~3.5 km × 900 m — nearly dry/seasonal; temple: Neak Pean
+
+### Water Management Functions
+
+All barays received water at their northeastern corners (a consistent design pattern). The system served multiple purposes:
+
+- **Groundwater recharge** — all barays helped maintain the water table through direct infiltration
+- **Irrigation** — the West Baray, Indratataka, and (initially) East Baray supplied canals feeding rice paddies
+- **Urban water supply** — the Jayatataka/North Baray supplied Angkor Thom city
+- **Flood control** — the natural slope of the terrain allowed overflow toward Tonlé Sap Lake
+- **Religious/political symbolism** — water legitimized royal authority and connected the earthly realm to cosmic geography
+
+### Decline and Collapse
+
+Research, including paleoenvironmental analysis of sediment cores from the West Baray (published in PNAS), indicates that the hydraulic system was actively managed from its construction through the 13th century. In the 14th century, sedimentation rates dropped dramatically — correlating with severe monsoon failures recorded in Vietnamese tree-ring data.
+
+By the late 14th century, Angkor suffered alternating droughts and catastrophic flooding over several consecutive years. Canals became blocked by debris from collapsing structures. The cascade of infrastructure failure contributed to the decline of the Khmer Empire, culminating in the Siamese invasion of 1430.
+
+---
+
+## GIS Data Sources & Satellite Imagery
+
+<div class="source-box">
+
+### Satellite Imagery (Free / Open Access)
+
+**For your Quarto story map, these are the best sources for imagery of the Angkor region:**
+
+| Source | Resolution | Coverage | Format | URL |
+|--------|-----------|----------|--------|-----|
+| **Sentinel-2** (ESA Copernicus) | 10m multispectral | Global, 5-day revisit | GeoTIFF | [Copernicus Browser](https://dataspace.copernicus.eu/browser/) |
+| **Landsat 8/9** (USGS/NASA) | 30m multispectral, 15m pan | Global, 16-day revisit | GeoTIFF | [EarthExplorer](https://earthexplorer.usgs.gov/) |
+| **ASTER** (NASA Terra) | 15m VNIR | Global | GeoTIFF | [NASA Earthdata](https://www.earthdata.nasa.gov/) |
+| **Google Earth Pro** | Sub-meter (historical archive) | Global | KMZ/KML/JPEG | [Google Earth Pro](https://www.google.com/earth/about/versions/#earth-pro) |
+| **EO Browser** (Sinergise) | Sentinel/Landsat/MODIS | Global | JPEG/GeoTIFF/KMZ | [EO Browser](https://apps.sentinel-hub.com/eo-browser/) |
+| **EOSDA LandViewer** | Multiple sensors | Global | GeoTIFF | [LandViewer](https://eos.com/landviewer/) |
+
+**Specific Angkor Imagery of Note:**
+
+- NASA Earthdata published a Sentinel-2C true-color image of Angkor Wat, Angkor Thom, and West Baray captured April 12, 2025, via the Harmonized Landsat and Sentinel-2 (HLS) program
+- NASA ASTER acquired a simulated natural color image on February 17, 2004 (centered near 13.4°N, 103.9°E, covering 22.4 × 29.9 km) — excellent for showing both barays and the temple complexes
+
+</div>
+
+<div class="source-box">
+
+### GIS Vector Data
+
+| Source | Data Type | Format | URL |
+|--------|-----------|--------|-----|
+| **OpenStreetMap via Geofabrik** | Roads, buildings, waterways, land use for Cambodia | SHP, PBF, GeoJSON | [Geofabrik Cambodia](https://download.geofabrik.de/asia/cambodia.html) |
+| **OSM QuickOSM** (QGIS Plugin) | Custom feature extraction (barays, temples, moats) | GeoJSON | Via QGIS plugin |
+| **HDX (Humanitarian Data Exchange)** | Cambodia admin boundaries (ADM0-3) | SHP | [HDX Cambodia COD-AB](https://data.humdata.org/dataset/cod-ab-khm) |
+| **DIVA-GIS** | Admin boundaries, roads, elevation, land cover for Cambodia | SHP, DIVA grid | [DIVA-GIS Cambodia](https://www.diva-gis.org/gdata) |
+| **Open Development Cambodia** | Land use, protected areas, environment layers | SHP, GeoJSON | [ODC Layers](https://opendevelopmentcambodia.net/layers/) |
+| **NASA SRTM** | Elevation / DEM (30m & 90m) | GeoTIFF | [EarthExplorer](https://earthexplorer.usgs.gov/) |
+
+</div>
+
+<div class="source-box">
+
+### Archaeological / LiDAR Data
+
+| Source | Description | Access |
+|--------|-------------|--------|
+| **Khmer Archaeology LiDAR Consortium (KALC)** | High-resolution airborne LiDAR covering 370+ km² of Angkor (2012) and 1,900+ km² expansion (2015). 0.5–1.0m resolution DTMs revealing urban grids, canals, mounds, and agricultural features invisible under forest canopy. | Archived at the Angkor International Research and Documentation Centre, Siem Reap. Contact APSARA National Authority for access. |
+| **Damian Evans et al. (2013, PNAS)** | Foundational LiDAR study mapping the urban landscape around Angkor Wat and Angkor Thom. Published figures and supplementary data available. | [PNAS Paper](https://www.pnas.org/doi/10.1073/pnas.1306539110) |
+| **Evans (2016) — Cambodian Archaeological LiDAR Initiative (CALI)** | Largest archaeological LiDAR survey in Asia (~3,000 km²). Published derivative data in journal supplements. | [Journal of Archaeological Science](https://doi.org/10.1016/j.jas.2016.05.002) |
+| **APSARA National Authority** | Managing body for the Angkor Archaeological Park; may provide spatial data upon request for research purposes. | [apsaraauthority.gov.kh](https://apsaraauthority.gov.kh/) |
+
+</div>
+
+---
+
+## Key Coordinates for Mapping
+
+Use the following coordinates as reference points for building your story map layers:
+
+<div class="coordinate-box">
+
+**West Baray**
+
+- NW Corner: 13.426°N, 103.773°E
+- NE Corner: 13.426°N, 103.852°E
+- SE Corner: 13.404°N, 103.852°E
+- SW Corner: 13.404°N, 103.773°E
+- Center (West Mebon): 13.414°N, 103.814°E
+
+**East Baray**
+
+- NW Corner: 13.445°N, 103.890°E
+- NE Corner: 13.445°N, 103.964°E
+- SE Corner: 13.427°N, 103.964°E
+- SW Corner: 13.427°N, 103.890°E
+- Center (East Mebon): 13.435°N, 103.926°E
+
+**Context Landmarks**
+
+- Angkor Wat: 13.4125°N, 103.8670°E
+- Angkor Thom (center): 13.4411°N, 103.8587°E
+- Phnom Bakheng: 13.4243°N, 103.8589°E
+- Siem Reap town center: 13.3633°N, 103.8600°E
+
+</div>
+
+::: {.callout-tip}
+## Digitizing Tip
+The barays are large enough to be clearly visible in Sentinel-2 imagery (10m resolution). For precise boundary digitization, use Google Earth Pro's historical imagery slider to find cloud-free dates. The West Baray is especially easy to identify due to its retained water. The dry East Baray is best visible in dry-season imagery (November–April) when crop patterns on its bed contrast with surrounding terrain.
+:::
+
+---
+
+## Recommended Workflow for Story Map
+
+### Data Acquisition
+
+1. **Download Sentinel-2 imagery** from Copernicus Browser for the Angkor region (tile T48PUV covers the area). Select cloud-free images from the dry season for best visibility of both barays.
+2. **Download Cambodia OSM data** from Geofabrik (roads, waterways, buildings layers).
+3. **Download SRTM DEM** from EarthExplorer for elevation context (the barays' embankments are visible in DEM data).
+4. **Extract baray polygons** from OSM using QuickOSM in QGIS (search for `natural=water` and `name=West Baray` or `name=East Baray`) or digitize from imagery.
+
+### Processing in ArcGIS Pro / QGIS
+
+1. Project all layers to **WGS 84 / UTM Zone 48N (EPSG:32648)** — the appropriate projected CRS for this area of Cambodia.
+2. Clip imagery and vector layers to the Angkor study area.
+3. Create custom polygon features for each baray if not available in OSM.
+4. Build attribute tables with historical metadata (construction dates, kings, dimensions, temple names).
+5. Generate hillshade from SRTM DEM to visualize embankment topography.
+
+### Quarto Story Map Assembly
+
+For a Leaflet-based interactive map in Quarto, consider using the `{leaflet}` R package or Python's `folium` library:
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-fold: show
+
+library(leaflet)
+library(sf)
+
+# Define baray extents as simple rectangles
+west_baray <- st_polygon(list(rbind(
+  c(103.773, 13.404), c(103.852, 13.404),
+  c(103.852, 13.426), c(103.773, 13.426),
+  c(103.773, 13.404)
+))) |> st_sfc(crs = 4326)
+
+east_baray <- st_polygon(list(rbind(
+  c(103.890, 13.427), c(103.964, 13.427),
+  c(103.964, 13.445), c(103.890, 13.445),
+  c(103.890, 13.427)
+))) |> st_sfc(crs = 4326)
+
+leaflet() |>
+  addProviderTiles("Esri.WorldImagery") |>
+  setView(lng = 103.87, lat = 13.43, zoom = 12) |>
+  addPolygons(data = west_baray,
+              color = "#2980b9", weight = 3, fillOpacity = 0.2,
+              popup = "<b>West Baray</b><br>7.8 × 2.1 km<br>Built: 11th c. CE<br>Still holds water") |>
+  addPolygons(data = east_baray,
+              color = "#e74c3c", weight = 3, fillOpacity = 0.2,
+              popup = "<b>East Baray</b><br>7.5 × 1.83 km<br>Built: ~900 CE<br>Now dry") |>
+  addMarkers(lng = 103.814, lat = 13.414,
+             popup = "West Mebon Temple") |>
+  addMarkers(lng = 103.926, lat = 13.435,
+             popup = "East Mebon Temple (953 CE)") |>
+  addMarkers(lng = 103.867, lat = 13.4125,
+             popup = "Angkor Wat")
+```
+
+For a Python/Folium approach:
+
+```{python}
+#| eval: false
+#| echo: true
+#| code-fold: show
+
+import folium
+
+m = folium.Map(location=[13.43, 103.87], zoom_start=12,
+               tiles="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+               attr="Esri World Imagery")
+
+# West Baray
+folium.Rectangle(
+    bounds=[[13.404, 103.773], [13.426, 103.852]],
+    color="#2980b9", weight=3, fill=True, fill_opacity=0.2,
+    popup="<b>West Baray</b><br>7.8 × 2.1 km<br>Built: 11th c. CE"
+).add_to(m)
+
+# East Baray
+folium.Rectangle(
+    bounds=[[13.427, 103.890], [13.445, 103.964]],
+    color="#e74c3c", weight=3, fill=True, fill_opacity=0.2,
+    popup="<b>East Baray</b><br>7.5 × 1.83 km<br>Built: ~900 CE"
+).add_to(m)
+
+# Temples
+folium.Marker([13.414, 103.814], popup="West Mebon Temple").add_to(m)
+folium.Marker([13.435, 103.926], popup="East Mebon Temple (953 CE)").add_to(m)
+folium.Marker([13.4125, 103.867], popup="Angkor Wat").add_to(m)
+
+m.save("barays_map.html")
+```
+
+---
+
+## Key References
+
+- Evans, D.H. et al. (2013). "Uncovering archaeological landscapes at Angkor using lidar." *PNAS*, 110(31), 12595-12600. [DOI](https://doi.org/10.1073/pnas.1306539110)
+- Evans, D. (2016). "Airborne laser scanning as a method for exploring long-term socio-ecological dynamics in Cambodia." *Journal of Archaeological Science*, 74, 164-175.
+- Day, M.B. et al. (2012). "Paleoenvironmental history of the West Baray, Angkor (Cambodia)." *PNAS*, 109(4), 1019-1024. [DOI](https://doi.org/10.1073/pnas.1111282109)
+- Fletcher, R., Penny, D., Evans, D., et al. (2008). "The water management network of Angkor, Cambodia." *Antiquity*, 82, 658-670.
+- Peou, H. "Rediscovering the ancient hydraulic system of Angkor." *International Journal of Intangible Heritage*. [Link](https://www.ijih.org/volumes/article/461)
+- Carleton, W.C. et al. (2023). "Bayesian regression versus machine learning for rapid age estimation of archaeological features identified with lidar at Angkor." *Scientific Reports*, 13, 17913.
+- Higham, C. (2001). *The Civilization of Angkor*. University of California Press.
+- Coe, M.D. & Evans, D. (2018). *Angkor and the Khmer Civilization*. Thames & Hudson.
+
+---
+
+## Appendix: CRS & Projection Notes
+
+For GIS work in the Angkor region:
+
+- **Geographic CRS:** WGS 84 (EPSG:4326) — for web maps, GPS coordinates, Leaflet/Folium
+- **Projected CRS:** WGS 84 / UTM Zone 48N (EPSG:32648) — for area/distance calculations, ArcGIS Pro analysis
+- **Asia South Albers Equal Area Conic** — recommended by HDX for Cambodia admin boundary data
+
+::: {.callout-note}
+## About This Report
+This report was compiled as a research foundation for building an interactive Quarto story map of the Angkor Barays. Coordinates are approximate and derived from satellite imagery; for precise GIS work, digitize boundaries from high-resolution imagery or obtain authoritative data from APSARA National Authority.
+:::

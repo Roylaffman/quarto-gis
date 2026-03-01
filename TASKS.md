@@ -50,6 +50,13 @@
 - [x] Create `CriticalMineralsSites.json` — 17 curated mining sites (lithium, REE, strategic metals) across 7 countries
 - [x] Create `critical-minerals.qmd` — 10-section story map (JSON-only, no PostGIS dependency)
 - [x] Render `critical-minerals.qmd` — all 10 cells pass, 22 MB standalone HTML output verified
+- [x] Create `SubstackCriticalMinerals.md` — Substack article draft with image placeholders
+- [x] Create `CriticalMineralsSourceGuide.md` — source quality guide with 7 tiers + full bibliography
+- [x] Create `export_critical_minerals_images.py` — exports 3 static PNGs (static-overview, lithium-production, ree-dominance)
+- [x] Create `download_rana_boylii_data.py` — harvester for 5 GIS layers (CA boundary, CDFW range/clades, EPA ecoregions, GBIF)
+- [x] Download all Rana boylii data (california.geojson 85KB, range 9.9MB, clades 8.8MB, ecoregions 10.4MB, occurrences 518KB / 6,253 pts)
+- [x] Create `rana-boylii.qmd` — 10-section story map (Foothill Yellow-legged Frog, California)
+- [x] Render `rana-boylii.qmd` — all 10 cells pass, standalone HTML output verified
 
 ## Database State (everglades_gis)
 | Table | Type | SRID | Rows |

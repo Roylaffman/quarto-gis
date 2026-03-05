@@ -109,3 +109,44 @@ thead th {
 .callout-tip {
 	border-left-color: #a16207;
 }
+
+/* -----------------------------------------------------------------------
+   Layout: page-layout full + toc-location right
+   Without these overrides, the right TOC sidebar can overlap content.
+   ----------------------------------------------------------------------- */
+
+/* Ensure main content has right breathing room for the TOC sidebar */
+#quarto-content .page-full #quarto-document-content,
+#quarto-content #quarto-document-content {
+	padding-right: 1.5rem;
+}
+
+/* Right sidebar TOC — earthy styling */
+#quarto-sidebar,
+nav#TOC {
+	border-left: 1px solid #e7d7c1;
+	padding-left: 1rem;
+	background: transparent;
+}
+
+nav#TOC .nav-link {
+	color: #78716c;
+	font-size: 0.85em;
+	padding: 0.15rem 0.5rem;
+}
+
+nav#TOC .nav-link:hover,
+nav#TOC .nav-link.active {
+	color: #7c3d12;
+	font-weight: 600;
+}
+
+/* Folium iframe — explicit height so map isn't tiny */
+.folium-map {
+	height: 650px;
+}
+
+iframe.folium-map {
+	height: 650px !important;
+	min-height: 500px;
+}

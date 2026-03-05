@@ -1,6 +1,6 @@
 # Minimal Guidance for Claude Code Users
 
-**Author:** Nathan Askins
+**Author:** Ryan Lafferty
 **Date:** 2026-01-27
 **Scope:** Security, quality, and organization guidance for team collaboration
 
@@ -209,7 +209,7 @@ These standards ensure file organization is consistent across team contributions
 
 | Rule | Rationale |
 |------|-----------|
-| Author attribution: Nathan Askins | External stakeholders see this work |
+| Author attribution: Ryan Lafferty | External stakeholders see this work |
 | No horizontal rules (---) in markdown | Use headings for section separation instead |
 
 ## Summary: The Minimal Rules

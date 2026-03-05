@@ -1,0 +1,163 @@
+---
+title: "QuartotoSS Pipeline"
+subtitle: "Converting Quarto Story Maps into Substack Articles"
+author: "Ryan Lafferty"
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-depth: 3
+---
+
+## Overview
+
+QuartotoSS is the standard workflow for turning a finished Quarto story map (`.qmd`) into a Substack article draft with a correctly structured images folder. Every story map in this project follows the same pipeline.
+
+**Invoke it as a Claude slash command:**
+
+```
+/quarto-to-ss <slug>
+```
+
+For example:
+
+```
+/quarto-to-ss stone-towers
+/quarto-to-ss rana-boylii
+/quarto-to-ss critical-minerals
+```
+
+Claude will walk through all seven steps automatically using the `.claude/commands/quarto-to-ss.md` skill definition.
+
+## Prerequisites
+
+Before running QuartotoSS, the source QMD must be:
+
+- Rendered successfully (`quarto render analysis/{slug}.qmd`)
+- Output HTML confirmed in `research/_output/analysis/{slug}.html`
+- Data and sources documented in the narrative sections
+
+## The Seven Steps
+
+### Step 1 — Read the QMD
+
+Claude reads the full `.qmd` file and extracts:
+
+- Title, subtitle, and narrative structure
+- Which charts and maps are generated (Plotly, matplotlib, Folium)
+- Bibliography and data sources
+- The overall story arc and key arguments
+
+### Step 2 — Export Static Images
+
+Every story map has (or needs) an `export_{slug}_images.py` script in `research/analysis/`. This script:
+
+- Renders all Plotly charts via `pio.write_image()` at `scale=2`
+- Renders all matplotlib maps via `fig.savefig()` at `dpi=150`
+- Copies every PNG to the Google Drive images folder
+
+The Folium interactive map is **always** excluded from the export script — it requires a manual browser screenshot.
+
+#### Export script conventions
+
+Follow the pattern from `export_stone_towers_images.py`:
+
+- `OUT_DIR = "_export_images"` for local output
+- `DRIVE_DIR = r"G:\My Drive\02. Obsidian\Lafferty Cloud\Substack\images\{slug}"` for Drive output
+- `save(fig, filename)` helper that writes local and copies to Drive
+- Print size in KB for each exported file
+- Final message listing what still needs a manual screenshot
+
+### Step 3 — Verify Images Folder
+
+Confirm that `G:\My Drive\02. Obsidian\Lafferty Cloud\Substack\images\{slug}\` exists and all generated PNGs are present.
+
+Expected folder contents example (stone-towers):
+
+```
+images/stone-towers/
+  stone-towers-plan-chart.png   ← exported by script
+  danba-osmnx.png               ← exported by script
+  interactive-map.png           ← MANUAL SCREENSHOT
+```
+
+### Step 4 — Check or Create Substack Draft
+
+The Substack draft lives in the Obsidian vault:
+
+```
+G:\My Drive\02. Obsidian\Lafferty Cloud\Substack\Substack{PascalCaseTitle}.md
+```
+
+Examples:
+
+| QMD slug | Substack file |
+|---|---|
+| `stone-towers` | `SubstackStoneTowers.md` |
+| `rana-boylii` | `SubstackRanaBoylii.md` |
+| `critical-minerals` | `SubstackLithiumAnalysis.md` |
+| `everglades-historical` | `SubstackEvergladesOutlawCoast.md` |
+
+### Step 5 — Write the Article
+
+The article follows the Substack Article template structure:
+
+1. **Hook** — 2-3 sentences, concrete and specific, no em dashes
+2. **Body** — 3-5 narrative sections with embedded images using Obsidian `![[]]` syntax
+3. **Takeaway** — precise conclusion, not generic
+4. **Call to Action** — subscribe prompt with a topic-specific hook
+5. **Notes to Self** — private section with tone, audience, length, image table
+
+#### Writing rules (always enforced)
+
+- No em dashes. Use commas, colons, or restructure the sentence.
+- Short sentences. Under 20 words preferred.
+- Precise nouns. "The Dadu River" not "the nearby river".
+- Do not open with "I".
+- Image embeds: `![[images/{slug}/filename.png]]` followed by an italicized caption on the next line.
+
+### Step 6 — Update Substack.md Index
+
+Add the new draft link to the `## Drafts — YYYY` section of `Substack.md`:
+
+```markdown
+[[SubstackStoneTowers]]
+```
+
+### Step 7 — Final Status Report
+
+Claude prints a checklist showing which images are exported, which need manual screenshots, and the location of the draft.
+
+## Manual Screenshot Step
+
+The interactive Folium map always requires a manual screenshot:
+
+1. Open `research/_output/analysis/{slug}.html` in a browser
+2. Adjust the map view to show the full extent
+3. Screenshot the map area (without browser chrome)
+4. Save to: `G:\My Drive\02. Obsidian\Lafferty Cloud\Substack\images\{slug}\interactive-map.png`
+5. Update the image table in the Substack draft from `SCREENSHOT NEEDED` to `DONE`
+
+## Project Status
+
+| Story Map | Substack Draft | Static Images | Interactive Screenshot |
+|---|---|---|---|
+| everglades-historical | SubstackEvergladesOutlawCoast.md | Exported | Done |
+| roman-roads | SubstackRomanRoads.md | Exported | Done |
+| critical-minerals | SubstackLithiumAnalysis.md | Exported | Done |
+| rana-boylii | SubstackRanaBoylii.md | Exported | **Needed** |
+| stone-towers | SubstackStoneTowers.md | Exported | **Needed** |
+
+## File Locations Reference
+
+| Asset | Path |
+|---|---|
+| QMD source | `research/analysis/{slug}.qmd` |
+| Export script | `research/analysis/export_{slug}_images.py` |
+| Local image output | `research/analysis/_export_images/` |
+| Drive images folder | `G:\My Drive\02. Obsidian\Lafferty Cloud\Substack\images\{slug}\` |
+| Substack draft | `G:\My Drive\02. Obsidian\Lafferty Cloud\Substack\Substack{Title}.md` |
+| Substack index | `G:\My Drive\02. Obsidian\Lafferty Cloud\Substack\Substack.md` |
+| Rendered HTML | `research/_output/analysis/{slug}.html` |
+| Skill definition | `.claude/commands/quarto-to-ss.md` |

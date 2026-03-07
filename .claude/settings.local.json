@@ -8,7 +8,12 @@
       "WebFetch(domain:www.epa.gov)",
       "WebFetch(domain:commons.wikimedia.org)",
       "WebFetch(domain:data.usgs.gov)",
-      "WebFetch(domain:catalog.data.gov)"
+      "WebFetch(domain:catalog.data.gov)",
+      "Bash(gsutil cp research/_output/analysis/rana-boylii.html gs://www.geoglypha1.org/rana-boylii.html)",
+      "Bash(gsutil cp research/_output/analysis/stone-towers.html gs://www.geoglypha1.org/stone-towers.html)",
+      "Bash(gsutil cp research/_output/analysis/roman-roads.html gs://www.geoglypha1.org/roman-roads.html)",
+      "Bash(gsutil cp research/_output/analysis/everglades-historical.html gs://www.geoglypha1.org/everglades-historical.html)",
+      "Bash(gsutil cp research/_output/analysis/critical-minerals.html gs://www.geoglypha1.org/critical-minerals.html)"
     ]
   }
 }

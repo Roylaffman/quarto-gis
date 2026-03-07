@@ -16,7 +16,7 @@ execute:
 
 ## The Outlaw Coast
 
-For nearly a century, the Ten Thousand Islands have served as Florida's untamed backdoor---a labyrinth of mangrove tunnels and oyster bars where the only law was the tide. In the 1920s, this "watery wilderness" became a haven for rum-runners who used the shallow, shifting channels to evade heavy Federal cutters, turning the quiet fishing villages of Chokoloskee and Everglades City into covert ports of call for Caribbean liquor. But the skills forged in that era---navigating the pitch-black backcountry without a chart---found a new purpose in the 1970s. As commercial fishing was restricted and the local economy cratered, the sons and grandsons of those early pioneers became "saltwater cowboys," swapping mullet for marijuana. Under the cover of the mangrove canopy, they transformed these islands into one of the primary entry points for the "Square Grouper" era, hauling millions of pounds of contraband through a landscape that swallowed outsiders whole.
+For nearly a century, the Ten Thousand Islands have served as Florida's untamed backdoor: a labyrinth of mangrove tunnels and oyster bars where the only law was the tide. In the 1920s, this "watery wilderness" became a haven for rum-runners who used the shallow, shifting channels to evade heavy Federal cutters, turning the quiet fishing villages of Chokoloskee and Everglades City into covert ports of call for Caribbean liquor. But the skills forged in that era, navigating the pitch-black backcountry without a chart, found a new purpose in the 1970s. As commercial fishing was restricted and the local economy cratered, the sons and grandsons of those early pioneers became "saltwater cowboys," swapping mullet for marijuana. Under the cover of the mangrove canopy, they transformed these islands into one of the primary entry points for the "Square Grouper" era, hauling millions of pounds of contraband through a landscape that swallowed outsiders whole.
 
 ---
 
@@ -54,7 +54,7 @@ display_cols.style.set_properties(
 
 ## The Smuggler's Highway
 
-To the uninitiated, the map of the Ten Thousand Islands is a chaotic splatter of green and blue, but to the smugglers, it was a precise network of arterial highways. The Barron River, the region's dredged commercial heart, served as the brazen front door where shrimp boats laden with bales would dock under the guise of a night's catch. Deeper in the backcountry lay the Chatham River, a historic channel echoing with the dark legacy of Edgar Watson, offering a direct, deep-water vein to the hidden interiors of the Glades. To the south, the Lopez River provided a winding "back alley" for smaller skiffs to slip unnoticed into the labyrinth, while the Wilderness Waterway---now a celebrated paddling trail---served as the "Inside Route," a 99-mile concealed highway allowing traffickers to move illicit cargo from the Cape Romano shoals all the way to Flamingo without ever exposing themselves to the open Gulf or the Coast Guard's gaze.
+To the uninitiated, the map of the Ten Thousand Islands is a chaotic splatter of green and blue, but to the smugglers, it was a precise network of arterial highways. The Barron River, the region's dredged commercial heart, served as the brazen front door where shrimp boats laden with bales would dock under the guise of a night's catch. Deeper in the backcountry lay the Chatham River, a historic channel echoing with the dark legacy of Edgar Watson, offering a direct, deep-water vein to the hidden interiors of the Glades. To the south, the Lopez River provided a winding "back alley" for smaller skiffs to slip unnoticed into the labyrinth, while the Wilderness Waterway, now a celebrated paddling trail, served as the "Inside Route," a 99-mile concealed highway allowing traffickers to move illicit cargo from the Cape Romano shoals all the way to Flamingo without ever exposing themselves to the open Gulf or the Coast Guard's gaze.
 
 ---
 
@@ -230,7 +230,7 @@ The following sources document the historical routes and smuggling operations ma
 
 ### Video Reference
 
-*Everglades City, Florida's Bootlegging Capital* --- This video explicitly connects the 1920s rum-running era to the 1980s drug trade, illustrating how the same local families and geography facilitated both eras of smuggling.
+*Everglades City, Florida's Bootlegging Capital* -- This video explicitly connects the 1920s rum-running era to the 1980s drug trade, illustrating how the same local families and geography facilitated both eras of smuggling.
 
 ---
 

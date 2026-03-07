@@ -24,13 +24,13 @@ execute:
 
 ## The Sentinel of the Streams
 
-There is a frog in California that refuses to wander. While most amphibians cycle freely between ponds and upland scrub, *Rana boylii* — the Foothill Yellow-legged Frog — is so deeply bound to moving water that it will not reproduce anywhere else. Not a pond, not a reservoir, not a slow creek. It needs a specific kind of stream: cobbled riffles with partial sun overhead, water that rises hard in winter and retreats slowly through summer, an uninterrupted seasonal pulse that California's rivers delivered reliably for tens of thousands of years.
+There is a frog in California that refuses to wander. While most amphibians cycle freely between ponds and upland scrub, *Rana boylii*, the Foothill Yellow-legged Frog, is so deeply bound to moving water that it will not reproduce anywhere else. Not a pond, not a reservoir, not a slow creek. It needs a specific kind of stream: cobbled riffles with partial sun overhead, water that rises hard in winter and retreats slowly through summer, an uninterrupted seasonal pulse that California's rivers delivered reliably for tens of thousands of years.
 
 That pulse is what's broken now.
 
-*Rana boylii* once traced a long arc down the Pacific Coast — from the Willamette River valley in Oregon through every major California drainage system to the San Gabriel Mountains east of Los Angeles. Biologists call it an "ecological sentinel": a species so tightly calibrated to lotic (flowing water) ecosystems that its disappearance signals something fundamental has shifted in the watershed. For the past 80 years, the signal has been getting louder. An estimated 45 to 55 percent of its historical range is gone. In the Sierra Nevada, roughly two-thirds of historic populations have been lost. South of the Tehachapis, the frog is essentially absent.
+*Rana boylii* once traced a long arc down the Pacific Coast, from the Willamette River valley in Oregon through every major California drainage system to the San Gabriel Mountains east of Los Angeles. Biologists call it an "ecological sentinel": a species so tightly calibrated to lotic (flowing water) ecosystems that its disappearance signals something fundamental has shifted in the watershed. For the past 80 years, the signal has been getting louder. An estimated 45 to 55 percent of its historical range is gone. In the Sierra Nevada, roughly two-thirds of historic populations have been lost. South of the Tehachapis, the frog is essentially absent.
 
-In 2023 and 2024, the U.S. Fish & Wildlife Service made it federal: distinct population segments of *Rana boylii* are now **Endangered** or **Threatened** under the Endangered Species Act. The maps in this document are a record of that decline — and of the strongholds where it's still holding on.
+In 2023 and 2024, the U.S. Fish & Wildlife Service made it federal: distinct population segments of *Rana boylii* are now **Endangered** or **Threatened** under the Endangered Species Act. The maps in this document record that decline and mark the strongholds where it's still holding on.
 
 ## Data & Setup
 
@@ -104,29 +104,29 @@ print(f"Documented sighting:       lat={farm_lat:.4f}, lon={farm_lon:.4f}")
 
 ## The Habitat: Where *Rana boylii* Lives
 
-Walk a Sierra Nevada foothill stream in late April. The water is still cold from snowmelt, running fast enough to move sand and rearrange the smaller cobbles but not so heavy that it flattens the riffles. Find a stretch where the channel widens slightly, where boulders have piled gravel into a shallow crossing, and where the oak canopy breaks and afternoon light hits the water. If this drainage is intact — no dams upstream, no introduced bullfrogs — there's a reasonable chance *Rana boylii* is using it.
+Walk a Sierra Nevada foothill stream in late April. The water is still cold from snowmelt, running fast enough to move sand and rearrange the smaller cobbles but not so heavy that it flattens the riffles. Find a stretch where the channel widens slightly, where boulders have piled gravel into a shallow crossing, and where the oak canopy breaks and afternoon light hits the water. If this drainage is intact, with no dams upstream and no introduced bullfrogs, there is a reasonable chance *Rana boylii* is using it.
 
 The habitat requirements are precise:
 
-**Substrate**: Shallow, rocky stream margins with coarse, unconsolidated pebble and cobble. The specific grain size matters: eggs are attached directly to submerged rocks. Too much fine sediment — from erosion, logging roads, or upstream disturbance — smothers the egg masses or reduces oxygen exchange.
+**Substrate**: Shallow, rocky stream margins with coarse, unconsolidated pebble and cobble. The specific grain size matters: eggs are attached directly to submerged rocks. Too much fine sediment, from erosion, logging roads, or upstream disturbance, smothers the egg masses or reduces oxygen exchange.
 
-**Flow regime**: Eggs go in during the seasonal window when flows are declining from peak snowmelt. The timing has to be right. A late storm or unexpected dam release sends a pulse of cold water through the riffle and scours egg masses off the rocks before they hatch. Tadpoles require stable, shallow, warming water through a long summer — if drought hits early or dam operators cut releases, they're stranded.
+**Flow regime**: Eggs go in during the seasonal window when flows are declining from peak snowmelt. The timing has to be right. A late storm or unexpected dam release sends a pulse of cold water through the riffle and scours egg masses off the rocks before they hatch. Tadpoles require stable, shallow, warming water through a long summer. If drought hits early or dam operators cut releases, they're stranded.
 
 **Light**: Tadpoles graze algae and diatoms growing on submerged rock surfaces. Those algae need sunlight. Dense riparian canopy is bad; so is complete deforestation. The frog needs that narrow-band middle condition: a partly open canopy that lets afternoon sun reach the streambed without cooking it.
 
-**Connectivity**: Unlike many California frogs, *Rana boylii* doesn't make long overland migrations. But it does move within a drainage — upstream to spawn, downstream after breeding — and it needs those corridors unblocked by impassable barriers or completely unfavorable reaches.
+**Connectivity**: Unlike many California frogs, *Rana boylii* doesn't make long overland migrations. But it does move within a drainage, upstream to spawn and downstream after breeding, and it needs those corridors unblocked by impassable barriers or completely unfavorable reaches.
 
 ## Range & Management Units
 
 ### Distinct Population Segments (DPS)
 
-Under the Endangered Species Act, a **Distinct Population Segment** is the smallest unit of a vertebrate species that can receive independent federal protection. A population has to be both *discrete* — physically, geographically, or genetically separated — and *significant*, meaning losing it would leave a meaningful gap in the species' range or substantially diminish its genetic diversity.
+Under the Endangered Species Act, a **Distinct Population Segment** is the smallest unit of a vertebrate species that can receive independent federal protection. A population has to be both *discrete*, whether physically, geographically, or genetically separated, and *significant*, meaning losing it would leave a meaningful gap in the species' range or substantially diminish its genetic diversity.
 
-For *Rana boylii*, DPS designations are practically necessary. The frog might be doing reasonably well in the intact river canyons of the Klamath and Trinity while simultaneously in freefall in the dam-fragmented streams of the southern Sierra. The DPS framework lets the Endangered Species Act apply exactly where it's needed. The Northern Populations appear "Not Listed" in the table below because their watersheds are intact enough that the emergency threshold hasn't been crossed — yet.
+For *Rana boylii*, DPS designations are practically necessary. The frog might be doing reasonably well in the intact river canyons of the Klamath and Trinity while simultaneously in freefall in the dam-fragmented streams of the southern Sierra. The DPS framework lets the Endangered Species Act apply exactly where it's needed. The Northern Populations appear "Not Listed" in the table below because their watersheds are intact enough that the emergency threshold has not been crossed. For now.
 
 ### Management Clades
 
-A **clade** is a group of organisms descending from a common ancestor. CDFW uses *management clades* to identify genetically distinct lineages within *Rana boylii* that carry different evolutionary histories and local adaptations — and that therefore cannot substitute for one another in recovery planning.
+A **clade** is a group of organisms descending from a common ancestor. CDFW uses *management clades* to identify genetically distinct lineages within *Rana boylii* that carry different evolutionary histories and local adaptations. These lineages cannot substitute for one another in recovery planning.
 
 California's geology has been doing this work for a long time. The Sierra Nevada, the Transverse Ranges, and the deep canyons of the North Coast Ranges have repeatedly isolated groups of frogs from each other. A population cut off from interbreeding for thousands of years develops specific timing cues, specific thermal tolerances, specific responses to its local snowmelt pulse. A South Sierra frog is not a good stand-in for a North Coast frog; the adaptations that make it thrive in one place are specifically *wrong* for the other. CDFW draws its six management clade boundaries along these genetic fault lines.
 
@@ -161,7 +161,7 @@ clade_table
 
 ### EPA Level III Ecoregions
 
-The EPA's **Level III Ecoregion** framework divides North America into zones of relatively uniform ecology — climate, soils, vegetation, land use. Within California, eleven Level III ecoregions span the state from the fog coast to the Basin and Range desert. They're not management units and carry no legal weight, but they explain the geography of the frog's distribution: *Rana boylii* is essentially absent from arid ecoregions and most abundant where Mediterranean-climate stream systems have stayed relatively intact.
+The EPA's **Level III Ecoregion** framework divides North America into zones of relatively uniform ecology: climate, soils, vegetation, and land use. Within California, eleven Level III ecoregions span the state from the fog coast to the Basin and Range desert. They're not management units and carry no legal weight, but they explain the geography of the frog's distribution: *Rana boylii* is essentially absent from arid ecoregions and most abundant where Mediterranean-climate stream systems have stayed relatively intact.
 
 ```{python}
 #| label: ecoregion-table
@@ -176,7 +176,7 @@ eco_table.sort_values("Area (km²)", ascending=False)
 
 ### GBIF Occurrence Records
 
-**GBIF** — the Global Biodiversity Information Facility — aggregates species observation records from museums, research institutions, and citizen science platforms (primarily iNaturalist) into a single open database. The 6,253 California records here span the 1890s to the present.
+**GBIF**, the Global Biodiversity Information Facility, aggregates species observation records from museums, research institutions, and citizen science platforms (primarily iNaturalist) into a single open database. The 6,253 California records here span the 1890s to the present.
 
 These are not population counts. GBIF records reflect where people have *looked*, and the sampling bias is real: roadside stream crossings and state park trails are heavily overrepresented; remote wilderness drainages are thin. But the spatial signal holds up. The near-complete absence of modern records from Southern California is consistent with independent survey data, rangewide assessments, and the federal listing decisions. The cluster density in the North Coast Ranges reflects both observer effort and genuine population density.
 
@@ -390,9 +390,9 @@ m
 
 ### A Note from the Field
 
-The red marker sits in the Feather River foothills of Butte County — a property where a friend documented a sighting in the spring of 2023. Several frogs, cobbled tributary, bright yellow-orange undersides visible in the shallows. The photos were unambiguous.
+The red marker sits in the Feather River foothills of Butte County, on a property where a friend documented a sighting in the spring of 2023. Several frogs, cobbled tributary, bright yellow-orange undersides visible in the shallows. The photos were unambiguous.
 
-That location falls within the North Fork Feather River watershed — the management unit now listed as Threatened. The Feather River system has one of the most intensively managed flow regimes in California. Oroville Dam, the tallest earthfill dam in the United States, controls the main stem with a precision that leaves almost nothing to chance. That frogs persist in small upland tributaries suggests those streams may be buffered enough from main-stem operations to retain some ecological function. Whether that persists as climate change shortens snowmelt windows is an open question.
+That location falls within the North Fork Feather River watershed, the management unit now listed as Threatened. The Feather River system has one of the most intensively managed flow regimes in California. Oroville Dam, the tallest earthfill dam in the United States, controls the main stem with a precision that leaves almost nothing to chance. That frogs persist in small upland tributaries suggests those streams may be buffered enough from main-stem operations to retain some ecological function. Whether that persists as climate change shortens snowmelt windows is an open question.
 
 ## A Shrinking Map
 
@@ -426,9 +426,9 @@ fig.update_layout(
 fig.show()
 ```
 
-The recent spike in observations reflects the rise of iNaturalist, not population recovery. By the mid-2010s, a trained naturalist with a smartphone could document a *Rana boylii* sighting in the time it took to kneel down by the stream. Before that, records required institutional access — museum collections, CDFW survey protocols, academic fieldwork. The historical thinness of older decades says more about who was recording than about where frogs were.
+The recent spike in observations reflects the rise of iNaturalist, not population recovery. By the mid-2010s, a trained naturalist with a smartphone could document a *Rana boylii* sighting in the time it took to kneel down by the stream. Before that, records required institutional access: museum collections, CDFW survey protocols, academic fieldwork. The historical thinness of older decades says more about who was recording than about where frogs were.
 
-What matters is the spatial breakdown of the modern records: they cluster hard in the northern Coast Ranges — the Klamath, Trinity, Mad River drainages — and in scattered Sierra foothill reaches where small tributaries have stayed intact. Southern California barely registers.
+What matters is the spatial breakdown of the modern records: they cluster hard in the northern Coast Ranges, particularly the Klamath, Trinity, and Mad River drainages, and in scattered Sierra foothill reaches where small tributaries have stayed intact. Southern California barely registers.
 
 Key losses by region:
 
@@ -489,7 +489,7 @@ fig2.update_layout(
 fig2.show()
 ```
 
-The April–June peak (amber bars) maps directly onto *Rana boylii*'s breeding window: declining flows, warming water, and the narrow spring window when egg masses can be safely attached to streambed cobbles without being swept away. The summer and fall months remain active — adults foraging along stream margins — but records thin out significantly. Cold-season observations drop near zero, consistent with the frog's partial dormancy in winter.
+The April–June peak (amber bars) maps directly onto *Rana boylii*'s breeding window: declining flows, warming water, and the narrow spring window when egg masses can be safely attached to streambed cobbles without being swept away. The summer and fall months remain active, with adults foraging along stream margins, but records thin out significantly. Cold-season observations drop near zero, consistent with the frog's partial dormancy in winter.
 
 ## Why the Frogs Are Disappearing
 
@@ -501,15 +501,15 @@ Four threats have restructured the geography of *Rana boylii*:
 
 **2. Invasive Species**
 
-Two introductions have had outsized impacts. The **American Bullfrog** (*Rana catesbeiana*) — released deliberately across California for commercial frog-farming operations beginning in the early 20th century — is a voracious predator and competitor that thrives in the warm, still-water habitats created by reservoirs. Non-native **centrarchid fishes** (bass, sunfish, bluegill) introduced for recreational angling prey heavily on *Rana boylii* tadpoles and juveniles in stream reaches where the frog historically had no fish predators.
+Two introductions have had outsized impacts. The **American Bullfrog** (*Rana catesbeiana*) was released deliberately across California for commercial frog-farming operations beginning in the early 20th century. It is a voracious predator and competitor that thrives in the warm, still-water habitats created by reservoirs. Non-native **centrarchid fishes** (bass, sunfish, bluegill) introduced for recreational angling prey heavily on *Rana boylii* tadpoles and juveniles in stream reaches where the frog historically had no fish predators.
 
 **3. Climate Change**
 
-The same hydrological sensitivities that make *Rana boylii* vulnerable to dam operations make it equally vulnerable to altered precipitation. More intense atmospheric river events followed by prolonged summer drought creates exactly the unpredictable flow regime — high water during egg development, early drying during tadpole development — that breaks the frog's life cycle. Snow-fed foothill streams that once ran clear into August now dry weeks earlier as the snowpack retreats upslope.
+The same hydrological sensitivities that make *Rana boylii* vulnerable to dam operations make it equally vulnerable to altered precipitation. More intense atmospheric river events followed by prolonged summer drought creates exactly the unpredictable flow regime that breaks the frog's life cycle: high water during egg development, early drying during tadpole development. Snow-fed foothill streams that once ran clear into August now dry weeks earlier as the snowpack retreats upslope.
 
 **4. Water Rights and Environmental Flow Deficits**
 
-California's rivers serve a long list of interests: irrigators who need summer deliveries, municipalities drawing from reservoirs, hydroelectric operators optimizing generation for peak-demand pricing. Environmental water requirements for *Rana boylii* — low, stable, gradually warming late-spring flows — are structurally at odds with most of these uses.
+California's rivers serve a long list of interests: irrigators who need summer deliveries, municipalities drawing from reservoirs, hydroelectric operators optimizing generation for peak-demand pricing. Environmental water requirements for *Rana boylii* are structurally at odds with most of these uses. The frog needs low, stable, gradually warming late-spring flows.
 
 Flow augmentation agreements negotiated under FERC hydroelectric licenses have produced real improvements on some drainages, including the North Fork Feather and parts of the Trinity. But implementing biologically meaningful flow releases requires operational flexibility that dam operators resist, and enforcement mechanisms are weak. Even where flow agreements exist, the implementation is inconsistent year to year. The result: a frog whose reproductive success is determined not only by weather but by decisions made in dam control rooms hundreds of miles from the nearest riffle.
 
@@ -759,7 +759,7 @@ print(f"GBIF occurrences: {len(occ_gdf):,} points ({occ['year'].min():.0f}–{oc
 
 ### Notes
 
-- **Data source**: CDFW BIOS filelib (ds589, ds2865) — `download_rana_boylii_data.py` must run once before rendering
+- **Data source**: CDFW BIOS filelib (ds589, ds2865). Run `download_rana_boylii_data.py` once before rendering.
 - **No PostGIS**: all data is file-based GeoJSON/CSV
 - **Geometry simplification**: `simplify(0.005)` on range, clade, and ecoregion layers for Folium performance
 - **GBIF**: 6,253 points from taxonKey 2426814 (California); heatmap used to avoid Quarto stack overflow on direct CircleMarker serialization

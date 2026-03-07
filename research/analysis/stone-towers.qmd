@@ -30,14 +30,14 @@ In the autumn of 1998, French explorer Frédérique Darragon was
 trekking through the deep river valleys of western Sichuan Province,
 tracking snow leopards, when she encountered something that had
 eluded sustained Western scholarly attention for centuries: clusters
-of massive stone towers — some soaring above 50 meters — rising from
+of massive stone towers, some soaring above 50 meters, rising from
 villages and ridgelines across the Sino-Tibetan borderlands.
 
 The towers were not unknown. Local Qiang (羌) and Gyalrong Tibetan
 communities had lived among them for generations. Chinese historians
 had referenced *diaolou* (碉楼, literally "watchtower buildings")
 since at least the Tang Dynasty. But in the Western geographical
-imagination, these structures barely registered — overshadowed by
+imagination, these structures barely registered: overshadowed by
 the Silk Road, the Great Wall, and the monasteries of central Tibet.
 
 ::: {.callout-note}
@@ -99,15 +99,15 @@ The towers occupy one of the most tectonically and culturally complex
 corridors on Earth: the eastern escarpment of the Tibetan Plateau,
 where elevations plunge from above 4,000 m to below 1,500 m over
 horizontal distances of less than 100 km. The region is defined by
-three major river systems — the **Dadu River** (大渡河), the **Min
-River** (岷江), and the **Yalong River** (雅砻江) — all of which have
+three major river systems: the **Dadu River** (大渡河), the **Min
+River** (岷江), and the **Yalong River** (雅砻江), all of which have
 carved deep, fortifiable gorges through Mesozoic limestone and
 Paleozoic granite [@yin2006; @kirby2003].
 
 This is not merely backdrop. The geology *enables* the towers: abundant
 tabular stone for dry-stack masonry, slopes that create natural
 defensible positions, and narrow valley floors that funnel movement
-along predictable routes — the same routes later formalized as the
+along predictable routes, the same routes later formalized as the
 **Tea-Horse Road** (茶马古道) [@freeman2015; @yang2004].
 
 ### Primary Zone: Aba and Garzê Prefectures, Sichuan
@@ -117,7 +117,7 @@ along predictable routes — the same routes later formalized as the
 Coordinates: ~30.88°N, 101.89°E | Elevation: 1,800–3,200 m
 
 The densest surviving concentration. The **Suopo Tower Cluster**
-(梭坡碉楼群) — 13 towers visible from a single vantage — is the most
+(梭坡碉楼群), with 13 towers visible from a single vantage, is the most
 photographed and studied group. The nearby **Jiaju Tibetan Village**
 (甲居藏寨) preserves towers integrated into a living residential
 landscape. Danba towers exhibit the full range of cross-sectional
@@ -378,7 +378,7 @@ fig_map
 The Suopo tower cluster sits in a river valley approximately 6 km
 northeast of Danba County seat, at around 2,400 m elevation. From a
 single viewpoint above the valley floor, 13 towers are visible
-simultaneously — an extraordinary density that reflects both the
+simultaneously, an extraordinary density that reflects both the
 social organization of the Gyalrong Tibetan communities who built
 them and the topographic channeling of the Dadu River gorge system.
 
@@ -403,7 +403,7 @@ plt.show()
 ### Cross-Sectional Geometry
 
 The most remarkable feature of these towers is the diversity of plan
-geometries — particularly the star-shaped forms found in greatest
+geometries, particularly the star-shaped forms found in greatest
 concentration around Danba County. The following table summarizes
 documented cross-section types:
 
@@ -465,7 +465,7 @@ fig.show()
 The towers are **dry-stone masonry**: flat, roughly dressed stone slabs
 stacked without mortar or cement, relying on friction, gravity, and
 precise fitting for stability. Wall thickness typically ranges from
-0.8 m at the base to 0.3 m near the summit — a *battered profile*
+0.8 m at the base to 0.3 m near the summit, a *battered profile*
 that lowers the center of gravity and increases resistance to lateral
 forces [@li2009danba; @wang2007qiang].
 
@@ -521,7 +521,7 @@ that shifted over time:
   platforms for dropping stones. Confirmed by Qing military records
   [@theobald2013].
 - **Prestige and social status**: Oral tradition holds that wealthier
-  Gyalrong families built taller, more geometrically complex towers —
+  Gyalrong families built taller, more geometrically complex towers,
   analogous to the competitive tower-building of San Gimignano in
   Tuscany or the tower houses of Svaneti in Georgia [@darragon2003].
 - **Storage and economic security**: Evidence of grain storage on upper
@@ -531,7 +531,7 @@ that shifted over time:
   suggests possible use as waypoints, toll stations, or signal relay
   points [@yang2004; @freeman2015].
 - **Ritual and cosmological**: Some researchers and local informants
-  associate towers with spiritual functions — orientation toward sacred
+  associate towers with spiritual functions: orientation toward sacred
   peaks, solstice alignment. Difficult to verify systematically but
   consistent with deep integration of architecture and cosmology in
   Tibetan and Qiang traditions [@aldenderfer2004].
@@ -645,8 +645,7 @@ comp.style\
 	.hide(axis="index")
 ```
 
-The Sichuan towers exceed all comparators in geometric complexity —
-no other tradition produced star plans — and match or exceed them in
+The Sichuan towers exceed all comparators in geometric complexity. No other tradition produced star plans, and they match or exceed all comparators in
 height while using the most structurally challenging technique (dry
 stone, no mortar, in a seismic zone). This combination is, as far as
 current evidence indicates, **globally unique**.
